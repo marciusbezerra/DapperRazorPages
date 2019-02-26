@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperRazorPages", "DapperRazorPages\DapperRazorPages.csproj", "{DDF77880-7BED-43BC-81AD-4BDDCA427C2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDF77880-7BED-43BC-81AD-4BDDCA427C2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDF77880-7BED-43BC-81AD-4BDDCA427C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDF77880-7BED-43BC-81AD-4BDDCA427C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDF77880-7BED-43BC-81AD-4BDDCA427C2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5166AF71-30A3-4B81-9C5C-C193844F683A}
+	EndGlobalSection
+EndGlobal
