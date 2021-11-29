@@ -1,11 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using DapperRazorPages.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,6 +10,15 @@ namespace DapperRazorPages
 {
     public class Startup
     {
+        //USE CadastroDB
+        //GO
+        //CREATE TABLE Produtos(
+        //    ProdutoId int IDENTITY(1,1) NOT NULL,
+        //    Estoque int NOT NULL,
+        //	Nome nvarchar(100) NOT NULL,
+        //    Preco[decimal](18, 2) NOT NUL)
+
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -32,7 +37,13 @@ namespace DapperRazorPages
             });
 
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc()
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                .AddRazorPagesOptions(o => o.Conventions.AddPageRoute("/Produto/Index", ""));
+
+
+            services.AddSingleton(Configuration);
+            services.AddTransient<IProdutoRepository, ProdutoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
